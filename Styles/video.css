@@ -1,0 +1,119 @@
+.thumbnail {
+    width: 100%
+}
+.thumbnail-container{
+    margin-bottom: 8px;
+    position: relative;
+}
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 27px;
+    justify-content: end;
+}
+@media(max-width: 750px)
+{
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    } 
+}
+@media(min-width: 751px) and (max-width: 999px)
+{
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+}
+@media(min-width: 1000px)
+{
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        font-size:14px ;
+    } 
+    .Video-title{
+        font-size: 16px;
+    }
+}
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.Video-title {
+    margin-bottom: 0px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    line-height: 18px;
+}
+
+.Video-author {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(96, 96, 96);
+    line-height: 18px;
+
+}
+
+.Video-stats {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgb(96, 96, 96);
+    line-height: 18px;
+}
+
+.channel-pic{
+    width: 36px;
+    border-radius: 36px;
+}
+.video-time{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    border-radius: 2px;
+    background-color:rgba(0, 0, 0,0.9);
+    color:white;
+    position: absolute;
+    bottom: 11px;
+    right: 4px;
+}
+.channel-pics a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.channel-pics a .tool-tip {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color:white;
+    color: black;
+    padding: 12px 12px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    bottom: -85px;
+    right: -162px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    box-shadow: 1px 0px 8px rgba(0, 0, 0,0.5);
+    transition: opacity 0.4s;
+}
+.channel-pics a:hover .tool-tip{
+    opacity: 1;
+}
